@@ -1,0 +1,81 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-container {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .botones {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .botones button {
+            padding: 10px 15px;
+            cursor: pointer;
+            flex: 1;
+            min-width: 100px;
+            border: 1px solid #ddd;
+            background-color: #f8f8f8;
+            border-radius: 4px;
+        }
+        .botones button[name="guardar"] {
+            background-color: #4CAF50;
+            color: white;
+            border-color: #4CAF50;
+            font-weight: bold;
+        }
+        .botones button[name="buscar"] {
+            background-color: #2196F3;
+            color: white;
+            border-color: #2196F3;
+            font-weight: bold;
+        }
+        .botones button[name="eliminar"] {
+            background-color: #f44336;
+            color: white;
+            border-color: #f44336;
+            font-weight: bold;
+        }
+        .botones button[name="nuevo"] {
+            background-color: #ff9800;
+            color: white;
+            border-color: #ff9800;
+            font-weight: bold;
+        }
+        .mensaje {
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        
+        
+        .success {
+            background-color: #dff0d8;
+            color: #3c763d;
+            border: 1px solid #d6e9c6;
+        }
+        .error {
+            background-color: #f2dede;
+            color: #a94442;
+            border: 1px solid #ebccd1;
+        }
