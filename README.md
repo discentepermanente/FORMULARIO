@@ -1,7 +1,7 @@
 
- Este formulario esta diseñado para estudiantes que inician con php  
- y de esta manera logren comprender el CRUD y su interacción con el  
- mismo formulario. Todo se hace desd el mismo formulario.            
+ Este formulario estaá diseñado para estudiantes que inician con php.  
+ De esta manera lograrán comprender el CRUD y su interacción con el  
+ mismo formulario. Todo se hace desde el mismo formulario.            
                                                                      
  CopyLeft ====== > Fidel Chávez                                      
                                                                      
