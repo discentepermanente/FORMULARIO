@@ -1,0 +1,83 @@
+<?php  
+include 'crud.php';  // Incluye el archivo con la lógica CRUD
+?>
+
+<!DOCTYPE html>
+<!-- Define el tipo de documento HTML5 -->
+<html lang="es">
+<head>
+    <!-- Configuración del documento -->
+    <meta charset="UTF-8"> <!-- Codificación de carácteres latinoamericanos -->
+    <title>CRUD</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="estilo.css"> <!-- Enlace a hoja de estilos -->
+</head>
+
+<body>
+    <!-- Contenedor principal del formulario -->
+    <div class="form-container">
+        <!-- Título dinámico según operación -->
+        <h2><?php echo $operacion == "crear" ? "Nuevo Usuario" : "Editar Usuario"; ?></h2>
+
+
+<!--  Bloque de php para mostrar confirmaciones CRUD visuales  -->       
+<?php 
+if (!empty($mensaje)) {
+    		echo '<div class="mensaje '.(strpos($mensaje, 'Error') !== false ? 'error' : 'success').'">';
+    		echo htmlspecialchars($mensaje);
+    		echo '</div>';
+		}
+?>
+        
+        <!-- Formulario CRUD -->
+        <form method="post" id="crudForm">
+            <!-- Campo oculto para ID del usuario -->
+            <!-- Si el id está vacío: El sistema ejecuta un INSERT (crear nuevo registro) -->
+            <!-- Si el id tiene valor: Ejecuta un UPDATE (actualizar registro existente) -->
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
+            
+            <!-- Grupo de campo para nombre -->
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" value="<?php echo $nombre; ?>">
+            </div>
+            
+            
+            <!-- Grupo de campo para apellido -->
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" value="<?php echo $apellido; ?>">
+            </div>
+            
+            
+            <!-- Grupo de campo para teléfono (requerido) -->
+            <div class="form-group">
+                <label for="telefono">Teléfono: <span style="color:red">*</span></label>
+                <input type="text" id="telefono" name="telefono" value="<?php echo $telefono; ?>" required>
+            </div>
+            
+            
+            <!-- Contenedor de botones de acciones -->
+            <div class="botones">
+                	<!-- Botón Guardar/Actualizar (dinámico) -->
+                	<button type="submit" name="guardar">
+                    	<?php echo $operacion == "crear" ? "Guardar" : "Actualizar"; ?>
+                	</button>
+                	
+                	<!-- Botón Buscar -->
+                	<button type="submit" name="buscar">Buscar</button>
+                	
+                	<!-- Botón Eliminar con confirmación -->
+                	<button type="submit" name="eliminar" onclick="return confirm('¿Eliminarás este usuario?')">Eliminar</button>
+                	
+                	<!-- Botón Nuevo (limpia formulario) -->
+                <button type="submit" name="nuevo">Nuevo</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+<?php 
+// Cierra la conexión a la base de datos
+$conn->close(); 
+?>
