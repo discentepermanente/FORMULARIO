@@ -10,7 +10,7 @@ function limpiar($data) {             // $data es una variable mutable. Contiene
     $data = stripslashes($data);      // Elimina barras invertidas de escape en contenido de $data
     $data = htmlspecialchars($data);  // Carácteres especiales se convierten a entidades html
     return $data;                     // La función recibe un string de $data. Si no hat return, la
-    }                                 // función deja de hacer su trabajo y no hay saanitización.
+    }                                 // función deja de hacer su trabajo y no hay sanitización.
 
 // VARIABLES PARA EL FORMULARIO
 $id = $nombre = $apellido = $telefono = "";
