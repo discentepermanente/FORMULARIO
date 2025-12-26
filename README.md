@@ -1,5 +1,5 @@
 
- Este formulario estaá diseñado para estudiantes que inician con php.  
+ Este formulario está diseñado para estudiantes que inician con php.  
  De esta manera lograrán comprender el CRUD y su interacción con el  
  mismo formulario. Todo se hace desde el mismo formulario.            
                                                                      
