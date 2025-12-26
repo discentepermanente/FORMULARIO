@@ -1,5 +1,7 @@
 <?php
-// Configuración de la base de datos
+// Configuración del acceso a la base de datos
+// Observemos que este método es de lo más inseguro que encontramos,
+// es tarea del estudiante securizarlo. 
 $host = "localhost"; // Tambien se puede anotar la ip fija del servicor
 $user = "usuario";   // Aqui el usuario autorizado del servidor
 $pass = "secreto";   // La contraseña que usted usa como root en Ubuntu
